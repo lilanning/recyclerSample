@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4238"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_position"
+            android:layout_margin="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text=""
+            tools:text="0"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal"
+            />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"/>
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/item_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            tools:background="@drawable/sunflower"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            tools:text="@string/add_flower"/>
+
+
+
+    </LinearLayout>
+
+</layout>
