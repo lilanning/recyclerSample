@@ -24,6 +24,24 @@
             android:text="RecycleView示例(二)"
             android:id="@+id/step_two"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_pager"
+            android:text="View Page"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_flower"/>
+
+        <com.example.recyclersample.waveview.WaveView
+            android:id="@+id/wave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
 
 
 

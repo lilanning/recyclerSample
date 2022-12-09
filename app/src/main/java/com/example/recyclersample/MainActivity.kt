@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity,SecondAdapterActivity::class.java))
         }
 
+        mainBinding.viewPager.setOnClickListener {
+            startActivity(Intent(this,ViewPageActivity::class.java))
+        }
+
 
 
     }

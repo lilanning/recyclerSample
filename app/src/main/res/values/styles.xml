@@ -22,4 +22,21 @@
         <item name="colorSecondary">@color/colorAccent</item>
     </style>
 
+
+    <declare-styleable name="WaveView">
+        <attr format="integer" name="waveCount"/>
+        <attr format="color" name="waveColor"/>
+        <attr format="dimension" name="waveAmplitude"/>
+        <attr format="dimension" name="waveMaxSpeed"/>
+        <attr format="dimension" name="waveMinSpeed"/>
+        <attr format="integer" name="waveRefreshInterval"/>
+        <attr format="boolean" name="waveAutoAnim"/>
+        <attr format="boolean" name="waveInverted"/>
+        <attr format="enum" name="waveDirection">
+            <enum name="LEFT_TO_RIGHT" value="1"/>
+            <enum name="RIGHT_TO_LEFT" value="2"/>
+        </attr>
+        <attr format="boolean" name="waveVertical"/>
+    </declare-styleable>
+
 </resources>
