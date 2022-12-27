@@ -8,6 +8,9 @@ import androidx.viewpager.widget.ViewPager
 import com.example.recyclersample.bean.PageDataBean
 import com.example.recyclersample.adapter.ViewPagerAdapter
 import com.example.recyclersample.databinding.ActivityViewPageBinding
+import com.example.recyclersample.fragment.FaXianFragment
+import com.example.recyclersample.fragment.MyFragment
+import com.example.recyclersample.fragment.TongXunLuFragment
 import com.example.recyclersample.fragment.WeiXinFragment
 import com.google.android.material.tabs.TabLayout
 
@@ -79,18 +82,18 @@ class ViewPageActivity : AppCompatActivity() {
         dataBean.setFragment(WeiXinFragment.newInstance())
         dataBean.setTittle("微信")
         val dataBean1 = PageDataBean()
-        dataBean1.setFragment(WeiXinFragment.newInstance())
+        dataBean1.setFragment(TongXunLuFragment.newInstance())
         dataBean1.setTittle("通讯录")
         val dataBean2 = PageDataBean()
-        dataBean2.setFragment(WeiXinFragment.newInstance())
+        dataBean2.setFragment(FaXianFragment.newInstance())
         dataBean2.setTittle("发现")
         val dataBean3 = PageDataBean()
-        dataBean3.setFragment(WeiXinFragment.newInstance())
+        dataBean3.setFragment(MyFragment.newInstance())
         dataBean3.setTittle("我的")
         (pagerData as ArrayList<PageDataBean>).add(dataBean)
-        pagerData.add(dataBean1)
-        pagerData.add(dataBean2)
-        pagerData.add(dataBean3)
+        (pagerData as ArrayList<PageDataBean>).add(dataBean1)
+        (pagerData as ArrayList<PageDataBean>).add(dataBean2)
+        (pagerData as ArrayList<PageDataBean>).add(dataBean3)
 
     }
 }
