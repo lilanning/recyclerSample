@@ -59,5 +59,6 @@
     <string name="remove_this_flower">Remove this flower</string>
 
     <string name="description">Recycle Demo</string>
+    <string name="viewpage2">View Pager 2</string>
 
 </resources>

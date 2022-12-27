@@ -3,13 +3,12 @@ package com.example.recyclersample
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager.widget.ViewPager
 import com.example.recyclersample.adapter.PageDataBean
 import com.example.recyclersample.adapter.ViewPagerAdapter
 import com.example.recyclersample.databinding.ActivityViewPageBinding
-import com.example.recyclersample.databinding.PagerBinding
+import com.example.recyclersample.fragment.WeiXinFragment
 import com.google.android.material.tabs.TabLayout
 
 class ViewPageActivity : AppCompatActivity() {
@@ -29,11 +28,11 @@ class ViewPageActivity : AppCompatActivity() {
             DataBindingUtil.inflate(layoutInflater, R.layout.activity_view_page, null, false)
         setContentView(viewPageBinding.root)
         initView()
-        val viewPagerAdapter = ViewPagerAdapter(pagerData)
+        val viewPagerAdapter = ViewPagerAdapter(pagerData,supportFragmentManager)
         viewPageBinding.viewPager.also {
             it.adapter = viewPagerAdapter
         }
-        (viewPageBinding.tablayout as TabLayout ).setupWithViewPager(viewPageBinding.viewPager)
+        (viewPageBinding.tablayout as TabLayout).setupWithViewPager(viewPageBinding.viewPager)
         viewPageBinding.viewPager.addOnPageChangeListener(
             object : ViewPager.OnPageChangeListener {
                 override fun onPageScrolled(
@@ -65,15 +64,33 @@ class ViewPageActivity : AppCompatActivity() {
 
     private fun initView() {
         Log.d(TAG, "initView: ")
-        for (i in 0 until res.size) {
-            val viewBinding =
-                DataBindingUtil.inflate<PagerBinding>(layoutInflater, R.layout.pager, null, false)
-            viewBinding.pagerText.text = "页面$i"
-            viewBinding.pageImage.setBackgroundResource(res[i])
-            val dataBean = PageDataBean()
-            dataBean.setTittle("页面$i")
-            dataBean.setView(viewBinding.root)
-            (pagerData as ArrayList<PageDataBean>).add(dataBean)
-        }
+//        for (i in 0 until res.size) {
+//            val viewBinding =
+//                DataBindingUtil.inflate<PagerBinding>(layoutInflater, R.layout.pager, null, false)
+//            viewBinding.pagerText.text = "页面$i"
+//            viewBinding.pageImage.setBackgroundResource(res[i])
+//            val dataBean = PageDataBean()
+//            dataBean.setTittle("页面$i")
+//            dataBean.setView(viewBinding.root)
+//            (pagerData as ArrayList<PageDataBean>).add(dataBean)
+//        }
+
+        val dataBean = PageDataBean()
+        dataBean.setFragment(WeiXinFragment.newInstance())
+        dataBean.setTittle("微信")
+        val dataBean1 = PageDataBean()
+        dataBean1.setFragment(WeiXinFragment.newInstance())
+        dataBean1.setTittle("通讯录")
+        val dataBean2 = PageDataBean()
+        dataBean2.setFragment(WeiXinFragment.newInstance())
+        dataBean2.setTittle("发现")
+        val dataBean3 = PageDataBean()
+        dataBean3.setFragment(WeiXinFragment.newInstance())
+        dataBean3.setTittle("我的")
+        (pagerData as ArrayList<PageDataBean>).add(dataBean)
+        pagerData.add(dataBean1)
+        pagerData.add(dataBean2)
+        pagerData.add(dataBean3)
+
     }
 }

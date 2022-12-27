@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/viewpage2"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tablayout"
+            android:id="@+id/viewpager2"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable"
+            app:tabIndicatorFullWidth="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_tv"/>
+
+<!--        tabIndicatorColor  指示器颜色-->
+<!--        tabIndicatorHeight 指示器高度-->
+<!--        tabIndicatorFullWidth  设置为false 则指示器跟文本宽度一致-->
+<!--        tabUnboundedRipple 设置为true点击时会有一个水波纹效果-->
+<!--        tabGravity 可设置center或fill；center指的是居中显示，fill指的是沾满全屏。-->
+<!--        tabMode 可设置fixed和 scrollable；fixed：指的是固定tab；scrollable指的是tab可滑动。-->
+<!--        tabTextColor tab文字颜色-->
+<!--        tabSelectedTextColor 选中时的tab颜色-->
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,23 +1,23 @@
 package com.example.recyclersample.adapter
 
-import android.view.View
+import androidx.fragment.app.Fragment
 
 class PageDataBean() {
 
-    private var view:View? = null
+    private var fragment:Fragment? = null
 
     private var tittle:String? = null
 
 
-    fun getView(): View? {
-        return view
+    fun getView(): Fragment? {
+        return fragment
     }
     fun getTittle(): String? {
         return tittle
     }
 
-    fun setView(view1: View){
-        view = view1
+    fun setFragment(fragment: Fragment){
+        this.fragment = fragment
     }
     fun setTittle(text:String){
         tittle = text

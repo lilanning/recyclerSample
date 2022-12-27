@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ViewPage2Activity"
+            android:exported="false" />
+        <activity
             android:name=".ViewPageActivity"
             android:exported="false" />
         <activity

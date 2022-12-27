@@ -38,10 +38,18 @@
             android:background="@drawable/nomaskripple"
             android:text="@string/add_flower"/>
 
+
         <com.example.recyclersample.waveview.WaveView
             android:id="@+id/wave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            />
+        <Button
+            android:id="@+id/step_view_pager2"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/viewpage2"
             />
 
 

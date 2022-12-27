@@ -1,12 +1,9 @@
 package com.example.recyclersample
 
 import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.animation.AlphaAnimation
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -43,6 +40,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,ViewPageActivity::class.java))
         }
 
+        mainBinding.stepViewPager2.setOnClickListener {
+            startActivity(Intent(this,ViewPage2Activity::class.java))
+
+        }
+
+//        val resId =
+//            applicationContext.resources.getIdentifier("freesia", "drawable", applicationContext.packageName)
+//        mainBinding.stepViewPager2.background = ResourcesCompat.getDrawable(applicationContext.resources,resId,null)
 
 
     }
