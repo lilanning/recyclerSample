@@ -7,6 +7,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclersample.R
+import com.example.recyclersample.bean.SimpleBean
 import com.example.recyclersample.databinding.GridadapterItemBinding
 
 class RecyclerGridAdapter(val context: Context, val datas: List<SimpleBean>, private var onItemClickListener: OnItemClickListener? = null) :

@@ -1,7 +1,7 @@
 package com.example.recyclersample.resource
 
 import com.example.recyclersample.R
-import com.example.recyclersample.adapter.SimpleBean
+import com.example.recyclersample.bean.SimpleBean
 
 class DataRes(){
 
@@ -46,7 +46,7 @@ class DataRes(){
 
     fun getRes() = res
 
-    fun addData(data:SimpleBean?){
+    fun addData(data: SimpleBean?){
         if (data != null) {
             (datas as ArrayList<SimpleBean>).add(data)
         }

@@ -1,4 +1,4 @@
-package com.example.recyclersample.adapter
+package com.example.recyclersample.bean
 
 import androidx.fragment.app.Fragment
 

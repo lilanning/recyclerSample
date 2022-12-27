@@ -3,6 +3,7 @@ package com.example.recyclersample.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import com.example.recyclersample.bean.PageDataBean
 
 class ViewPagerAdapter(private val pagerDatas:List<PageDataBean>, fm: FragmentManager) :
     FragmentStatePagerAdapter(fm) {

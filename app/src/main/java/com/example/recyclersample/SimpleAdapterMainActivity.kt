@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclersample.adapter.OnItemClickListener
 import com.example.recyclersample.adapter.SimpleAdapter
-import com.example.recyclersample.adapter.SimpleBean
+import com.example.recyclersample.bean.SimpleBean
 import com.example.recyclersample.databinding.ActivitySimpleBinding
 import com.example.recyclersample.resource.DataRes
 

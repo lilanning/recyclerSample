@@ -1,4 +1,4 @@
-package com.example.recyclersample.adapter
+package com.example.recyclersample.bean
 
 class SimpleBean{
     private var resId:Int? = null

@@ -3,11 +3,11 @@ package com.example.recyclersample.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclersample.R
+import com.example.recyclersample.bean.SimpleBean
 import com.example.recyclersample.databinding.LayoutItemBinding
 
 class SimpleAdapter(val context: Context,val datas:List<SimpleBean>) : RecyclerView.Adapter<SimpleAdapter.SimpleAdapterViewHolder>() {

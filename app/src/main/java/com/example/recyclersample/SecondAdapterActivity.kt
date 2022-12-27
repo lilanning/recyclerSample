@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.recyclersample.adapter.OnItemClickListener
 import com.example.recyclersample.adapter.RecyclerGridAdapter
-import com.example.recyclersample.adapter.SimpleBean
+import com.example.recyclersample.bean.SimpleBean
 import com.example.recyclersample.databinding.ActivitySecondAdapterBinding
 import com.example.recyclersample.resource.DataRes
 

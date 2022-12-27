@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager.widget.ViewPager
-import com.example.recyclersample.adapter.PageDataBean
+import com.example.recyclersample.bean.PageDataBean
 import com.example.recyclersample.adapter.ViewPagerAdapter
 import com.example.recyclersample.databinding.ActivityViewPageBinding
 import com.example.recyclersample.fragment.WeiXinFragment
