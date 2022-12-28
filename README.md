@@ -50,3 +50,5 @@ https://github.com/android/views-widgets
 
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.# recyclerSample
+
+EventBus参考：https://juejin.cn/post/6979140087158145054

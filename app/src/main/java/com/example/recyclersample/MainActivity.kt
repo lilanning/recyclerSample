@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.recyclersample.bean.Event
+import org.greenrobot.eventbus.EventBus
 import com.example.recyclersample.databinding.ActivityMainBinding
 
 
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         mainBinding.viewPager.setOnClickListener {
             startActivity(Intent(this,ViewPageActivity::class.java))
+            EventBus.getDefault().postSticky(Event(1,"这是一条粘性事件"))
         }
 
         mainBinding.stepViewPager2.setOnClickListener {

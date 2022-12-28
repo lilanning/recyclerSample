@@ -2,17 +2,22 @@ package com.example.recyclersample
 
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager.widget.ViewPager
 import com.example.recyclersample.bean.PageDataBean
 import com.example.recyclersample.adapter.ViewPagerAdapter
+import com.example.recyclersample.bean.Event
 import com.example.recyclersample.databinding.ActivityViewPageBinding
 import com.example.recyclersample.fragment.FaXianFragment
 import com.example.recyclersample.fragment.MyFragment
 import com.example.recyclersample.fragment.TongXunLuFragment
 import com.example.recyclersample.fragment.WeiXinFragment
 import com.google.android.material.tabs.TabLayout
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 class ViewPageActivity : AppCompatActivity() {
     private val TAG = "ViewPageActivity"
@@ -27,6 +32,8 @@ class ViewPageActivity : AppCompatActivity() {
     private lateinit var viewPageBinding: ActivityViewPageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        EventBus.getDefault().register(this)
+
         viewPageBinding =
             DataBindingUtil.inflate(layoutInflater, R.layout.activity_view_page, null, false)
         setContentView(viewPageBinding.root)
@@ -96,4 +103,38 @@ class ViewPageActivity : AppCompatActivity() {
         (pagerData as ArrayList<PageDataBean>).add(dataBean3)
 
     }
+
+    /**
+     * EventBus的注册和反注册需要成对出现，一般在onCreate和onDestroy方法，或者在onStart和onStop方法中。
+     */
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        EventBus.getDefault().unregister(this)
+    }
+
+
+    @Subscribe(threadMode = ThreadMode.POSTING, sticky = true, priority = 1)
+    fun onMessageEvent(event: Event) {
+        Log.i(TAG,"onMessageEvent ${event.message}")
+
+
+
+    }
+
+    /**
+     * 模拟按键
+     */
+//    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+//        if (keyCode == KeyEvent.KEYCODE_BACK){//模拟返回键
+//            moveTaskToBack(true)
+//            return true
+//
+//        }
+//
+//        return super.onKeyDown(keyCode, event)
+//    }
 }
