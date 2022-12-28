@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
 
     </data>
@@ -11,8 +11,18 @@
         >
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="微信"/>
+        <ImageView
+            android:id="@+id/wei_xin_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:imageUrl="@{`https://www.qqkw.com/d/file/p/2018/07-31/a58bf1118b9fec45a40c4a560f167ef6.jpg`}"
+             />
+
+<!--        这是` 不是引号-->
+<!--        app:imageUrl="@{`https://goss.veer.com/creative/vcg/veer/800water/veer-136599950.jpg`}"-->
 
     </LinearLayout>
 
