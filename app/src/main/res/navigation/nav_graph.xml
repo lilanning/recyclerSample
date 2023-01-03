@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_weiXin"
+    android:id="@+id/navi_graph">
+
+
+    <fragment
+        android:id="@+id/fragment_weiXin"
+        android:name="com.example.recyclersample.fragment.WeiXinFragment"
+        android:label="微信"
+        tools:layout="@layout/fragment_weixin"
+        />
+    <fragment
+        android:id="@+id/fragment_tongXnLu"
+        android:name="com.example.recyclersample.fragment.TongXunLuFragment"
+        android:label="通讯录"
+        tools:layout="@layout/fragment_tongxunlu"
+        />
+    <fragment
+        android:id="@+id/fragment_FaXian"
+        android:name="com.example.recyclersample.fragment.FaXianFragment"
+        android:label="发现"
+        tools:layout="@layout/fragment_faxian"
+        />
+    <fragment
+        android:id="@+id/fragment_My"
+        android:name="com.example.recyclersample.fragment.MyFragment"
+        android:label="我的"
+        tools:layout="@layout/fragment_my"
+        />
+
+
+</navigation>

@@ -1,23 +1,18 @@
 package com.example.recyclersample.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.example.recyclersample.MyApplication
 import com.example.recyclersample.R
 import com.example.recyclersample.base.BaseFragment
 import com.example.recyclersample.databinding.FragmentWeixinBinding
-import java.lang.Exception
-import java.net.HttpURLConnection
-import java.net.URI
 
-class WeiXinFragment: BaseFragment<FragmentWeixinBinding>() {
+class WeiXinFragment : BaseFragment<FragmentWeixinBinding>() {
 
-    companion object{
+    companion object {
         fun newInstance() = WeiXinFragment()
     }
 
@@ -29,6 +24,9 @@ class WeiXinFragment: BaseFragment<FragmentWeixinBinding>() {
         super.onViewCreated(view, savedInstanceState)
 
 
+        Glide.with(MyApplication.context)
+            .load("https://www.qqkw.com/d/file/p/2018/07-31/a58bf1118b9fec45a40c4a560f167ef6.jpg")
+            .into(dataBinding.weiXinIv)
 
         //setImageSrc(dataBinding.weiXinIv,"https://www.qqkw.com/d/file/p/2018/07-31/a58bf1118b9fec45a40c4a560f167ef6.jpg")
         //Glide.with(requireActivity()).load("https://www.qqkw.com/d/file/p/2018/07-31/a58bf1118b9fec45a40c4a560f167ef6.jpg").into(dataBinding.weiXinIv)

@@ -48,6 +48,10 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        mainBinding.stepNavi.setOnClickListener { view->
+            startActivity(Intent(this,NavigationActivity::class.java))
+        }
+
 //        val resId =
 //            applicationContext.resources.getIdentifier("freesia", "drawable", applicationContext.packageName)
 //        mainBinding.stepViewPager2.background = ResourcesCompat.getDrawable(applicationContext.resources,resId,null)

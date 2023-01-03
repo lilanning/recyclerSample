@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_weiXin"
+        android:icon="@drawable/weixin"
+        android:contentDescription="third_fragment"
+        android:title="微信"/>
+
+    <item
+        android:id="@+id/fragment_tongXnLu"
+        android:icon="@drawable/tongxunlu"
+        android:contentDescription="third_fragment"
+        android:title="通讯录"/>
+
+    <item
+        android:id="@+id/fragment_FaXian"
+        android:contentDescription="third_fragment"
+        android:icon="@drawable/faxian"
+        android:title="发现"/>
+
+    <item
+        android:id="@+id/fragment_My"
+        android:contentDescription="third_fragment"
+        android:icon="@drawable/my"
+        android:title="我的"/>
+
+</menu>
