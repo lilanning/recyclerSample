@@ -2,10 +2,14 @@ package com.example.recyclersample.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.RoundedCorner
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.example.recyclersample.R
 import com.example.recyclersample.bean.SimpleBean
 import com.example.recyclersample.databinding.GridadapterItemBinding
@@ -29,8 +33,10 @@ class RecyclerGridAdapter(val context: Context, val datas: List<SimpleBean>, pri
     }
 
     override fun onBindViewHolder(holder: RecyclerGridAdapterViewHolder, position: Int) {
-        holder.itemImg.setImageDrawable(datas[position].getResID()
-            ?.let { ResourcesCompat.getDrawable(context.resources, it,null) })
+
+        val options =  RequestOptions().transform(RoundedCorners(100))
+        Glide.with(context).load(datas[position].getResID()).apply(options).into(holder.itemImg)
+
         holder.itemText.text = datas[position].getName()
         if (datas[position].isFirst()){
             datas[position].setShowHeight(
