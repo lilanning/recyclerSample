@@ -39,10 +39,10 @@
             android:text="@string/add_flower"/>
 
 
-        <com.example.recyclersample.waveview.WaveView
+        <ImageView
             android:id="@+id/wave"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             />
         <Button
             android:id="@+id/step_view_pager2"

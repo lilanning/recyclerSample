@@ -12,13 +12,22 @@ import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import com.example.recyclersample.bean.Event
 import com.example.recyclersample.databinding.ActivityMainBinding
+import com.example.recyclersample.http.Data
+import com.example.recyclersample.http.RetrofitManager
+import com.google.gson.Gson
 import org.greenrobot.eventbus.EventBus
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class MainActivity : AppCompatActivity() {
 
 
+    private val TAG = MainActivity::class.java.simpleName
     private lateinit var mainBinding: ActivityMainBinding
+
+
     var stepSimple: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -75,6 +84,37 @@ class MainActivity : AppCompatActivity() {
         } else {
             getContacts()
         }
+
+        //Retrofit实现网络请求
+        mainBinding.button.setOnClickListener {
+            RetrofitManager.service.getHotWord("新歌榜", "json").enqueue(object :
+                Callback<Data> {
+                override fun onResponse(call: Call<Data>, response: Response<Data>) {
+                    val gson = Gson().fromJson<Data>(response.body()?.toString(), Data::class.java)
+                }
+
+                override fun onFailure(call: Call<Data>, t: Throwable) {
+                    Log.d(TAG, "onFailure: " + t.message)
+                }
+
+            })
+//            RetrofitManager.service.getImage("动漫","json").enqueue(object :Callback<Image> {
+//                override fun onResponse(call: Call<Image>, response: Response<Image>) {
+//                    Log.d(TAG, "onResponse: " + response.body()?.imgurl)
+//                    Glide.with(applicationContext).load(response.body()?.imgurl).into(mainBinding.wave)
+//                }
+//
+//                override fun onFailure(call: Call<Image>, t: Throwable) {
+//                    Log.d(TAG, "onFailure: " + t.message)
+//                }
+//
+//            })
+//            RetrofitManager.post("https://api.uomg.com/api/long2fh?dwzapi=urlcn&url=http://qrpay.uomg.com")
+//            RetrofitManager.getUrl("https://api.uomg.com/api/get.kg?songurl=https://node.kg.qq.com/play?s=YaCv8EYfJunVWYcH")
+//            RetrofitManager.getAsyncUrl("https://api.uomg.com/api/get.kg?songurl=https://node.kg.qq.com/play?s=YaCv8EYfJunVWYcH&format=json")
+//            RetrofitManager.postAsync("https://api.uomg.com/api/long2fh?url=http://qrpay.uomg.com")
+
+        }
     }
 
     private fun getContacts() {
@@ -92,8 +132,13 @@ class MainActivity : AppCompatActivity() {
                 getContacts()
             } else {
                 //未授权
-                Toast.makeText(this,"file permission denied", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "file permission denied", Toast.LENGTH_SHORT).show()
             }
         }
     }
 }
+
+
+
+
+
