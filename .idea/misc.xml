@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/activity_main.xml" value="0.436046511627907" />
+        <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/activity_navigation.xml" value="0.22" />
         <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/activity_simple.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/activity_view_page.xml" value="0.5536458333333333" />
         <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/activity_view_page2.xml" value="0.5536458333333333" />
+        <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/fragment_faxian.xml" value="0.3807291666666667" />
         <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/fragment_tongxunlu.xml" value="0.5536458333333333" />
         <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/fragment_weixin.xml" value="0.4623352165725047" />
         <entry key="..\:/Users/GW00239967/Desktop/a/recyclerSample/app/src/main/res/layout/gridadapter_item.xml" value="0.4525660964230171" />

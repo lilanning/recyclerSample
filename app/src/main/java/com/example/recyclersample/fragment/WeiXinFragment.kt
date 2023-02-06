@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.AndroidViewModel
 import com.bumptech.glide.Glide
 import com.example.recyclersample.MyApplication
 import com.example.recyclersample.R
@@ -12,6 +14,7 @@ import com.example.recyclersample.databinding.FragmentWeixinBinding
 
 class WeiXinFragment : BaseFragment<FragmentWeixinBinding>() {
 
+    val weiXinViewModel:WeiXinViewModel by viewModels()
     companion object {
         fun newInstance() = WeiXinFragment()
     }
@@ -22,6 +25,7 @@ class WeiXinFragment : BaseFragment<FragmentWeixinBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        dataBinding.vm = weiXinViewModel
 
 
         Glide.with(MyApplication.context)
